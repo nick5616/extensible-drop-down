@@ -1,32 +1,17 @@
+import {useState} from 'react'
 const { default: Option } = require("./Option");
 
 function DropDown(props){
-
+  const [selectedValue, setSelectedValue] = useState("");
+  
   function populateMultipleDropDown(){
       let count = 0;
       console.log("props!", props)
-      const bilgur = props.options.map((option) => {
-        return <Option value={option} multi={props.multi} className="input-field"> {option} </Option>
+      
+      const ret = props.options.map((option) => {
+        return <Option value={option} multi={props.multi} className="input-field" selectedValue={selectedValue} setSelectedValue={setSelectedValue}> {option} </Option>
       });
-      const content = 
-      <div className="input-parent">
-        <div className="input-box">
-          <label 
-            htmlFor="cars" 
-            style={{display: "block"}} 
-            className="input-label left">
-            {props.label}   
-          </label>
-          <div className="input-field">
-            {props.options[0]}
-          </div>
-          <div></div>
-        </div>
-        <div className="input-options">
-          {bilgur}
-        </div> 
-      </div>
-      return content; 
+      return ret;
   }
   
   function populateSingleDropdown() {
@@ -47,13 +32,32 @@ function DropDown(props){
       </div> 
       return content; 
   }
-
+  
+  
+  const bilgur = populateMultipleDropDown();
+  
   return (
     <div className="drop-down">
       <div>
         
           
-        {props.multi ? populateMultipleDropDown() : populateSingleDropdown()}
+      <div className="input-parent">
+        <div className="input-box">
+          <label 
+            htmlFor="cars" 
+            style={{display: "block"}} 
+            className="input-label left">
+            {props.label}   
+          </label>
+          <div className="input-field" >
+            {selectedValue}
+          </div>
+          <div></div>
+        </div>
+        <div className="input-options" >
+          {bilgur}
+        </div> 
+      </div>
        </div>
        
       </div>
