@@ -2,18 +2,27 @@ import { useState } from "react"
 let values = [];
 
 function Option(props) {
-
-  function formatArray(){
+  function isNull(val){
+    return val === 'undefined';
+  }
+  function formatArrayWithCommas(){
     console.log("about to format", values, values.length); 
     let string = "";
     for(let i = 0; i < values.length; i++) {
-      
+      console.log("about to add", values[i], values[i] === 'undefined');
       if(i != 0) string += ", "
       
-      string += values[i];
+      if(values[i] !== 'undefined') string += values[i];
     }
-    console.log("about to return", string);
-    return string;
+    console.log("about to return", string, string === 'undefined');
+    return string === 'undefined' ? "" : string;
+  }
+
+  function formatArray(){
+    let ret = "";
+    values.map((key, value) => {
+      
+    })
   }
 
   function addCheckedValue(){
@@ -22,18 +31,19 @@ function Option(props) {
     values.push(props.value);
    
     props.setSelectedValue(
-      formatArray()
+      formatArrayWithCommas()
     );
     
   }
 
   function removeCheckedValue(){
-    let newVal = props.selectedValue - ", " - props.value;
-    console.log("newval", newVal, typeof newVal !== Number);
-    if(typeof newval !== Number) {
-      newVal = "";
-    }
-    props.setSelectedValue(newVal);
+    //delete values[values.indexOf(props.value)];
+    //values.filter(isNull);
+    values.splice(values.indexOf(props.value), 1);
+    console.log("filtered array", values);
+    props.setSelectedValue(
+      formatArrayWithCommas()
+    );
   }
 
   const [clicked, setClicked] = useState(false);

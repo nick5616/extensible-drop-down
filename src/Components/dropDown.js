@@ -35,7 +35,22 @@ function DropDown(props){
   
   
   const bilgur = populateMultipleDropDown();
-  
+  const burger = 
+  <div className="selected-item">
+    Bixby McBeep
+  </div>
+  const burger2 = 
+  <div className="selected-item">
+    Shithead Thomas
+  </div>
+  const burger3 = 
+  <div className="selected-item">
+    Tonsil Harding
+  </div>
+  const burger4 = 
+  <div className="selected-item">
+    Jane Wacko
+  </div>
   return (
     <div className="drop-down">
       <div>
