@@ -5,7 +5,7 @@ import DropDown from './Components/dropDown';
 function App() {
   return (
     <div className="main flex">
-      <DropDown label="Tag"></DropDown>
+      <DropDown label="Tag" multi></DropDown>
       <DropDown label="Age"></DropDown>
     </div>
   );
