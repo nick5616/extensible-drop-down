@@ -1,7 +1,6 @@
 
 .drop-down {
   padding: 10px;
-  position: relative;
   margin-bottom: 10px;
 }
 
@@ -11,9 +10,8 @@
 
 .input-box{
   border: 2px solid rgb(74, 144, 226);
-  padding: 10px;
-  border-radius: 5px;
-  width: fit-content;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 .input-parent{
@@ -33,6 +31,58 @@
 .input-field{
   font-size: medium;
   border: none;
+  
+  padding-left: 5px;
+  
+}
+
+/* option table tr td select{width:400px;} */
+select option {
+  margin: 2vh;
+  min-width: 600px;
+}
+
+.input-field:focus{
+  width: fit-content;
+}
+.input-field:focus{
+  border: none;
+  outline: none;
+}
+.input-default {
+  font-style: italic;
+}
+
+.input-options {
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.21) 0px 2px 5px 0px;
+  
+}
+
+.input-option {
+  padding: 5px 15px;
+  display: flex;
+}
+
+.input-option:hover {
+  background-color: rgb(240, 247, 255);
+
+}
+.input-checkbox{
+  border: 2px solid rgb(131, 132, 131);
+  height: 15px;
+  width: 15px;
+  border-radius: 2px;
+} 
+
+.input-option-value {
+  width: 100%;
+  line-height: 10px;
+  padding: 10px;
+  vertical-align:middle;
+}
+.input-option-checkbox {
+  margin: 5px;
 }
 
 .left{
@@ -40,5 +90,9 @@
 }
 
 .flex{
-  display: flex;
+  display: inline-flex;
+}
+
+.clicked {
+  background-color:  rgb(74, 144, 226);
 }
