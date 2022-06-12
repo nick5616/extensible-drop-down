@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import DropDown from './Components/dropDown';
 
 function App() {
   return (
-    <div className="App">
-      <div className="drop-down"></div>
+    <div className="main flex">
+      <DropDown label="Tag"></DropDown>
+      <DropDown label="Age"></DropDown>
     </div>
   );
 }
