@@ -1,7 +1,7 @@
-function Tag(){
+function Tag(props){
   return (
     <div className="selected-item">
-      Shithead Thomas
+      {props.content}
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Tag from "./Tag"
 let values = [];
 
 function Option(props) {
@@ -19,10 +20,12 @@ function Option(props) {
   }
 
   function formatArray(){
-    let ret = "";
-    values.map((key, value) => {
-      
+    
+    const ret = values.map((key, value) => {
+      <Tag></Tag>
     })
+    console.log("RET", ret);
+    return ret;
   }
 
   function addCheckedValue(){
@@ -31,7 +34,7 @@ function Option(props) {
     values.push(props.value);
    
     props.setSelectedValue(
-      formatArrayWithCommas()
+      formatArray()
     );
     
   }
@@ -42,7 +45,7 @@ function Option(props) {
     values.splice(values.indexOf(props.value), 1);
     console.log("filtered array", values);
     props.setSelectedValue(
-      formatArrayWithCommas()
+      formatArray()
     );
   }
 

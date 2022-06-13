@@ -7,8 +7,9 @@ function DropDown(props){
 
   function populateMultipleDropDown(){
       let count = 0;
-      let classes="";
-      if(!dropped) classes="none"; 
+      let base = "options-background";
+      let classes = base;
+      if(!dropped) classes+=" none"; 
       console.log("props!", props)
       
       const ret = props.options.map((option) => {
@@ -102,10 +103,11 @@ function DropDown(props){
             
           </div>
         </div>
-        <div className="input-options" id="input-options">
-          {populateMultipleDropDown()}
-          
-        </div> 
+        <div className="input-options-background">
+          <div className="input-options" id="input-options">
+            {populateMultipleDropDown()}
+          </div> 
+        </div>
       </div>
        </div>
        

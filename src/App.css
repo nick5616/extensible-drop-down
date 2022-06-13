@@ -1,4 +1,8 @@
 
+div {
+  border-radius: 5px;
+  
+}
 .drop-down {
   padding: 10px;
   margin-bottom: 10px;
@@ -11,11 +15,13 @@
 .input-box{
   border: 2px solid linear-gradient(245deg, rgba(157,10,241,1) 0%, rgba(13,66,235,1) 100%);
   padding: 5px;
-  border-radius: 3px;
+  border-radius: 5px;
   min-width: fit-content;
   
   display: flex;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.21) 0px 2px 5px 0px;
+
 }
 
 .input-parent{
@@ -26,7 +32,7 @@
   color:rgb(74, 144, 226);
   color: linear-gradient(245deg, rgba(157,10,241,1) 0%, rgba(13,66,235,1) 100%);
   position: absolute;
-  top: 0.75vh;
+  top: 0vh;
   background-color: white;
   padding-left: 5px;
   padding-right: 5px;
@@ -66,6 +72,14 @@ select option {
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.21) 0px 2px 5px 0px;
   
+  background: rgba(255,255,255,0.7);
+  color: rgba(0,0,0, 0.5);
+  font-weight: 600;
+}
+
+.input-options-background {
+  background: linear-gradient(0.25turn, #e66465, #9198e5);
+  border-radius: 5px;
 }
 
 .input-option {
@@ -74,7 +88,7 @@ select option {
 }
 
 .input-option:hover {
-  background-color: rgb(240, 247, 255);
+  background-color: rgba(255, 255, 255, 0.30);
 
 }
 .input-checkbox{
@@ -120,15 +134,14 @@ select option {
  */
   font-size: 11pt;
   font-weight: 500;
-  background: linear-gradient(rgb(240, 247, 255), rgb(74, 144, 226));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;   
+  color: rgba(0,0,0, 0.5);; 
+  background: rgba(255,255,255, 0.5);;
 } 
 
 .border {
   background: linear-gradient(0.25turn, #e66465, #9198e5);
   
-  padding: 2px;
+  
   border-radius: 5px;
 }
 
@@ -152,4 +165,8 @@ select option {
   margin-left: 10px;
   height: 100%;
   
+}
+
+.options-background {
+  border-radius: 5px;
 }
