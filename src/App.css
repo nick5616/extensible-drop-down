@@ -9,10 +9,13 @@
 }
 
 .input-box{
-  border: 2px solid rgb(74, 144, 226);
+  border: 2px solid linear-gradient(245deg, rgba(157,10,241,1) 0%, rgba(13,66,235,1) 100%);
   padding: 5px;
   border-radius: 3px;
   min-width: fit-content;
+  
+  display: flex;
+  background-color: white;
 }
 
 .input-parent{
@@ -21,6 +24,7 @@
 
 .input-label{
   color:rgb(74, 144, 226);
+  color: linear-gradient(245deg, rgba(157,10,241,1) 0%, rgba(13,66,235,1) 100%);
   position: absolute;
   top: 0.75vh;
   background-color: white;
@@ -33,9 +37,12 @@
   font-size: medium;
   border: none;
   min-height: 1.6vh;
-  width: 100%;
+  width: fit-content;
   padding-left: 5px;
   padding-right: 5px;
+  min-width: 22vw;
+  display: flex;
+  
 }
 
 /* option table tr td select{width:400px;} */
@@ -100,10 +107,49 @@ select option {
 }
 
 .selected-item{
-  background-color:  rgb(74, 144, 226);
-  margin: 5px;
-  padding: 5px;
+  /* border:  1px solid rgb(74, 144, 226); */
   width: fit-content;
+  margin: 5px;
+  padding: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
   border-radius: 5px;
-  color: white;
+  word-wrap: none;
+  white-space: nowrap;
+  /* box-shadow: rgba(0, 0, 0, 0.21) 0px 2px 5px 0px;
+ */
+  font-size: 11pt;
+  font-weight: 500;
+  background: linear-gradient(rgb(240, 247, 255), rgb(74, 144, 226));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;   
+} 
+
+.border {
+  background: linear-gradient(0.25turn, #e66465, #9198e5);
+  
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.none {
+  display: none;
+}
+
+.collapsed-icon {
+  font-size: 0px; line-height: 0%; width: 0px;
+  border-top: 10px solid transparent;
+  border-left: 14px solid rgb(74, 144, 226);
+  border-bottom: 10px solid transparent;
+  float: right;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+.icon-container{
+  width: 100%;
+  margin-left: 10px;
+  height: 100%;
+  
 }
